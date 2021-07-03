@@ -14,7 +14,7 @@ steps:
    args: ["push", "gcr.io/$PROJECT_ID/tomcat"]
 # Deploy an image from Container Registry to Cloud Run
  - name: 'gcr.io/cloud-builders/docker'
-   args: ['beta', 'run', 'deploy', 'tomcat', 'image', 'gcr.io/$PROJECT_ID/tomcat:latest', '--region', 'europe-west1', '--platform', 'managed', '--allow-unauthenticated']
+   args: ['beta', 'run', 'deploy', 'tomcat', 'image', 'gcr.io/$PROJECT_ID/tomcat:latest', '--platform', 'managed', '--allow-unauthenticated']
 images:
  - 'gcr.io/$PROJECT_ID/tomcat'
 
